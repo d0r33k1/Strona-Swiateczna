@@ -1,0 +1,133 @@
+/* Siatka i układ strony */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "navigation content advertisement"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Nagłówek */
+.header {
+    grid-area: header;
+    background-color: #ff0000;  /* Pomarańczowy czerwony, świąteczny kolor */
+    color: #ffffff;             /* Jasny tekst */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-size: 2.5em;           /* Powiększony nagłówek */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Nawigacja */
+.navigation {
+    grid-area: navigation;
+    background-color: #2ecc71;  /* Świeży zielony */
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation li {
+    margin: 10px 0;
+}
+
+.navigation a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+/* Treść */
+.content {
+    grid-area: content;
+    background-color: #e7e5e5;  /* Białe tło dla treści */
+    color: #3a3a3a;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6; /* Zwiększenie odstępów między wierszami */
+    font-size: 1.1em; /* Zwiększenie rozmiaru czcionki */
+}
+
+.content h2 {
+    color: #ff6347;  /* Kolor pasujący do nagłówka */
+    font-size: 3em;
+}
+.content h3 {
+    color: #ff6347;  /* Kolor pasujący do nagłówka */
+    font-size: 2em;
+}
+.content h4 {
+    color: #ff6347;  /* Kolor pasujący do nagłówka */
+    font-size: 2em;
+}
+.content h5 {
+    color: #ff6347;  /* Kolor pasujący do nagłówka */
+    font-size: 2em;
+}
+.content h6 {
+    color: #ff6347;  /* Kolor pasujący do nagłówka */
+    font-size: 2em;
+}
+/* Reklama */
+.advertisement {
+    grid-area: advertisement;
+    background-color: #2ecc71;  /* Jasny złoty */
+    color: #333333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.advertisement h3 {
+    font-size: 1.5em;
+}
+
+/* Stopka */
+.footer {
+    grid-area: footer;
+    background-color: #ff0000;  /* Granatowy */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Animacja dla płatków śniegu */
+.snowflake {
+    position: absolute;
+    color: #dbf4fa;  /* Jasne płatki śniegu */
+    font-size: 1.5em;
+    opacity: 0;
+    animation: snowflakes 10s linear infinite;
+}
+
+@keyframes snowflakes {
+    0% { top: -10%; opacity: 0; }
+    100% { top: 100%; opacity: 1; }
+}
+
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}

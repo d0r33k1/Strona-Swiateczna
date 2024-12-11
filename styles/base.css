@@ -1,0 +1,36 @@
+/* Resetowanie stylów i podstawowe ustawienia czcionek */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c4e2ff; /* Delikatny błękitny odcień tła */
+    color: #333;
+    line-height: 1.6;
+    background-image: url('snowflakes-background.png'); /* Tło z motywem śniegu */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+}
+
+/* Animacje i przejścia */
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #1e90ff;
+}
+
+a:hover {
+    color: #c21d0f;
+    text-decoration: underline;
+}
